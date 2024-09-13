@@ -5,24 +5,39 @@ const menu = {
     Desserts: ["Tiramisu", "Cheesecake"]
 };
 
+
+
+
 // Function to display menu items by category
 function displayMenuItems(menu) {
     // Get the menu container element from the HTML
-
+    //const menuSection = document.getElementById('menu');
     // Loop through each category and its items in the menu object
-
+    menu.forEach(element => {
+        console.log(element);
         // Create an element to represent the category
-
-        // Set the text content of the category element to the category name
-
-        // Append the category element to the menu container
-
-        // Create an element to represent a list of items
-
-        // Append a list of items element to the menu container
-
-        // Loop through the items in the category and create list items
-
+        // const category = document.createElement('h3');
+        // // Set the text content of the category element to the category name
+        // category.textContent = ;
+        // // Append the category element to the menu container
+        // menuSection.appendChild(category);
+        // // Create an element to represent a list of items
+        // const categoryList = document.createElement('ul');
+        // // Append a list of items element to the menu container
+        // menuSection.appendChild(categoryList);
+        // // Loop through the items in the category and create list items
+        // menu.Starters.forEach(element => {
+        //     const menuItem = document.createElement('li');
+        //     menuItem.textContent = element;
+        //     categoryList.appendChild(menuItem);
+        // });
+    });
+        
+        
+        
+        
+          
+        
             // Create a list item element
 
             // Set the text content of the list item element to the item name
@@ -52,6 +67,7 @@ function addToOrder(itemName) {
 // Function to initialize the menu system
 function initMenuSystem(menu) {
     // Call the function to display menu items
+    displayMenuItems(menu);
 }
 
 // Start the menu system by calling the init function

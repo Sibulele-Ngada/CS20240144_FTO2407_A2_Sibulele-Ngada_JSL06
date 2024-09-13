@@ -6,7 +6,10 @@ const menu = {
 };
 
 // QUESTION: What should you do first? How can you display menu items by category?
-
+const menuSection = document.getElementById('menu');
+const starters = document.createElement('h2');
+starters.textContent = `Starters`;
+menuSection.appendChild(starters);
 // Function to display menu items by category
 function displayMenuItems(menu) {
     // QUESTION: What do you need to get from the HTML to display the menu? Find a way to reference it.
