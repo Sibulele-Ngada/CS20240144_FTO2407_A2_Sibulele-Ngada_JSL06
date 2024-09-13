@@ -11,33 +11,60 @@ const menu = {
 // Function to display menu items by category
 function displayMenuItems(menu) {
     // Get the menu container element from the HTML
-    //const menuSection = document.getElementById('menu');
+    const menuSection = document.getElementById('menu');
     // Loop through each category and its items in the menu object
-    menu.forEach(element => {
-        console.log(element);
+    
         // Create an element to represent the category
-        // const category = document.createElement('h3');
-        // // Set the text content of the category element to the category name
-        // category.textContent = ;
-        // // Append the category element to the menu container
-        // menuSection.appendChild(category);
-        // // Create an element to represent a list of items
-        // const categoryList = document.createElement('ul');
-        // // Append a list of items element to the menu container
-        // menuSection.appendChild(categoryList);
-        // // Loop through the items in the category and create list items
-        // menu.Starters.forEach(element => {
-        //     const menuItem = document.createElement('li');
-        //     menuItem.textContent = element;
-        //     categoryList.appendChild(menuItem);
-        // });
-    });
-        
-        
-        
-        
-          
-        
+        const starters = document.createElement('h3');
+        // Set the text content of the category element to the category name
+        starters.textContent = `Starters`;
+        // Append the category element to the menu container
+        menuSection.appendChild(starters);
+        // Create an element to represent a list of items
+        const starterList = document.createElement('ul');
+        // Append a list of items element to the menu container
+        menuSection.appendChild(starterList);  
+        // Loop through the items in the category and create list items
+        menu.Starters.forEach(element => {
+            const menuItem = document.createElement('li');
+            menuItem.textContent = element;
+            starterList.appendChild(menuItem);
+        });
+
+        // Create an element to represent the category
+        const mains = document.createElement('h3');
+        // Set the text content of the category element to the category name
+        mains.textContent = `MainCourses`;
+        // Append the category element to the menu container
+        menuSection.appendChild(mains);
+        // Create an element to represent a list of items
+        const mainsList = document.createElement('ul');
+        // Append a list of items element to the menu container
+        menuSection.appendChild(mainsList);  
+        // Loop through the items in the category and create list items
+        menu.Starters.forEach(element => {
+            const menuItem = document.createElement('li');
+            menuItem.textContent = element;
+            mainsList.appendChild(menuItem);
+        });
+
+
+        // Create an element to represent the category
+        const dessert = document.createElement('h3');
+        // Set the text content of the category element to the category name
+        dessert.textContent = `Dessert`;
+        // Append the category element to the menu container
+        menuSection.appendChild(dessert);
+        // Create an element to represent a list of items
+        const dessertList = document.createElement('ul');
+        // Append a list of items element to the menu container
+        menuSection.appendChild(dessertList);  
+        // Loop through the items in the category and create list items
+        menu.Starters.forEach(element => {
+            const menuItem = document.createElement('li');
+            menuItem.textContent = element;
+            dessertList.appendChild(menuItem);
+        });
             // Create a list item element
 
             // Set the text content of the list item element to the item name
