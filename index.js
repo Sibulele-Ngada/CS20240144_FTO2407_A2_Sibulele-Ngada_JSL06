@@ -5,7 +5,7 @@ const menu = {
     Desserts: ["Tiramisu", "Cheesecake"]
 };
 
-let newTotal = 0;
+let newTotal = 0.00;
 
 // Function to display menu items by category
 function displayMenuItems(menu) {
@@ -98,10 +98,9 @@ function addToOrder(itemName) {
     orderList.appendChild(orderItem);
     // Calculate and update the total price
     const orderTotal = document.getElementById('order-total');
-    newTotal += 5;
-    alert(`${newTotal}`);
-    // // Update the text content of the order total element with the new total
-    // orderTotal.textContent = 54;
+    newTotal += 60.00;
+    // Update the text content of the order total element with the new total
+    orderTotal.textContent = `${newTotal}.00`;
 }
 
 // Function to initialize the menu system
