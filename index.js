@@ -2,11 +2,12 @@
 const menu = {
     Starters: ["Garlic Bread", "Bruschetta"],
     MainCourses: ["Margherita Pizza", "Spaghetti Carbonara"],
-    Desserts: ["Tiramisu", "Cheesecake"]
+    Desserts: ["Tiramisu", "Cheesecake"],
+    Wines: ["White Wine", "Red Wine"]
 };
 
-let newTotal = 0.00;
 const categories = Object.keys(menu);
+
 // Function to display menu items by category
 function displayMenuItems(menu) {
     // Get the menu container element from the HTML
@@ -24,7 +25,7 @@ function displayMenuItems(menu) {
         // Append a list of items element to the menu container
         menuSection.appendChild(menuItemList);  
         // Loop through the items in the category and create list items
-        menu.Starters.forEach(element => {
+        menu[category].forEach(element => {
             // Create a list item element
             const menuItem = document.createElement('li');
             // Set the text content of the list item element to the item name
@@ -49,9 +50,11 @@ function addToOrder(itemName) {
     orderList.appendChild(orderItem);
     // Calculate and update the total price
     const orderTotal = document.getElementById('order-total');
-    newTotal += 60.00;
+    const currentTotal = parseFloat(orderTotal.textContent);
+    const itemPrice = 60; 
+    const newTotal = currentTotal + itemPrice;
     // Update the text content of the order total element with the new total
-    orderTotal.textContent = `${newTotal}.00`;
+    orderTotal.textContent = newTotal.toFixed(2);
 }
 
 // Function to initialize the menu system
