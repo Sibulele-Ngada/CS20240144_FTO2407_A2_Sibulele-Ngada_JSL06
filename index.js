@@ -2,16 +2,15 @@
 const menu = {
     Starters: ["Garlic Bread", "Bruschetta"],
     MainCourses: ["Margherita Pizza", "Spaghetti Carbonara"],
-    Desserts: ["Tiramisu", "Cheesecake"],
-    Wines: ["White Wine", "Red Wine"]
+    Desserts: ["Tiramisu", "Cheesecake"]
 };
-
-const categories = Object.keys(menu);
 
 // Function to display menu items by category
 function displayMenuItems(menu) {
     // Get the menu container element from the HTML
     const menuSection = document.getElementById('menu');
+    // Get list of categories from menu object
+    const categories = Object.keys(menu);
     // Loop through each category and its items in the menu object
     categories.forEach(category => {
         // Create an element to represent the category
@@ -25,13 +24,13 @@ function displayMenuItems(menu) {
         // Append a list of items element to the menu container
         menuSection.appendChild(menuItemList);  
         // Loop through the items in the category and create list items
-        menu[category].forEach(element => {
+        menu[category].forEach(meal => {
             // Create a list item element
             const menuItem = document.createElement('li');
             // Set the text content of the list item element to the item name
-            menuItem.textContent = element;
+            menuItem.textContent = meal;
             // Attach a click event listener to the list item to add it to the order   
-            menuItem.addEventListener('click', () => addToOrder(element));
+            menuItem.addEventListener('click', () => addToOrder(meal));
             // Append the list item to the list of items
             menuItemList.appendChild(menuItem);
         });
